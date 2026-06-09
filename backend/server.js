@@ -35,7 +35,10 @@ app.use(helmet({
   crossOriginResourcePolicy: false // Allows loading local uploaded files if necessary
 }));
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://exam-bot-tome.vercel.app'
+  ],
   credentials: true
 }));
 
